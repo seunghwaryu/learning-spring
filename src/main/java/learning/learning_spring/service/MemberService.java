@@ -3,13 +3,17 @@ package learning.learning_spring.service;
 import learning.learning_spring.domain.Member;
 import learning.learning_spring.repository.MemberRepository;
 import learning.learning_spring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
