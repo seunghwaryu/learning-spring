@@ -1,6 +1,7 @@
 package learning.learning_spring;
 
 import learning.learning_spring.repository.JdbcMemberRepository;
+import learning.learning_spring.repository.JdbcTemplateMemberRepository;
 import learning.learning_spring.repository.MemberRepository;
 import learning.learning_spring.service.MemberService;
 import org.springframework.context.annotation.Bean;
@@ -24,6 +25,7 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository() {
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
