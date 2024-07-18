@@ -1,5 +1,6 @@
 package learning.learning_spring;
 
+import learning.learning_spring.aop.TimeTraceAop;
 import learning.learning_spring.repository.MemberRepository;
 import learning.learning_spring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,11 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
 
 //    @Bean
 //    public MemberRepository memberRepository() {
